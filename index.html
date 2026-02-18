@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind - Dark Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Noémie <span style="color: var(--text);">Anal Training</span> Program</h1>
+</header>
+
+<div class="rules-details" id="rules-prep">
+    <div class="rules-summary" onclick="document.getElementById('rules-prep').classList.toggle('open')">
+        <span>🕯️ Protocole de Préparation Physique</span>
+        <span class="arrow">▼</span>
+    </div>
+    <div class="rules-content">
+        Quand tu te sens prête, lave-toi bien le cul, munis-toi de lubrifiants (huile de coco, lub spécial anal etc.) puis prends le temps de t'échauffer la rondelle <span class="highlight">(10min mini)</span>, <b>sniffe du poppers entre chaque étape</b>.
+        <ul>
+            <li>Écarte bien tes fesses, étire-les correctement jusqu'au trou du cul et fais-les bouger.</li>
+            <li>Masse-toi l'anus avec tes doigts, appuie dessus.</li>
+            <li>Fais un petit crochet avec une phalange et étire-le petit à petit doucement.</li>
+        </ul>
+        Une fois détendue, avec un doigt, en faisant des va-et-vient lents mais de plus en plus profonds, profite-en pour bien lubrifier l'intérieur, n'hésite pas à en mettre trop, ce n'est jamais assez. <span class="highlight">(5min mini)</span>.
+        <br><br>
+        <span class="warning-text">L'utilisation d'un VPN est obligatoire. Reprends régulièrement du poppers.</span>
+    </div>
+</div>
+
+<div class="rules-details" id="rules-game">
+    <div class="rules-summary" onclick="document.getElementById('rules-game').classList.toggle('open')">
+        <span>🎮 Les Règles du Jeu & Punitions</span>
+        <span class="arrow">▼</span>
+    </div>
+    <div class="rules-content">
+        <b>Le but :</b> Déverrouiller le cadenas en additionnant les valeurs des codes doujins découverts.
+        <br><br>
+        <b>Mécanique :</b> Il y a 20 doujins cachés. Un doujin = 5 tags <span class="highlight">qu'il ne partage avec aucun autre</span>. Tu dois révéler les 5 tags d'un même doujin pour faire apparaître son bouton. Attention, certaines couleurs sont très proches. Si tu ne connais pas la signification d'un tag tu peux <b>ctrl+clic</b> pour aller voir la catégorie.
+        <br><br>
+        <b class="highlight">Le Piquant (Sanctions par </b> <span class="highlight">RATÉ</span> <b class="highlight">) :</b>
+        <ul>
+            <li><b>Vibro :</b> 1 pulsation de 1 min</li>
+            <li><b>Chapelet :</b> 1 bille</li>
+            <li><b>Plug bijoux :</b> Le sortir et le remettre 1 fois</li>
+            <li><b>Doigts :</b> Mettre 3 doigts et tenir 1 minute</li>
+            <li><b>Gode monstre :</b> 5 va-et-vient du gland</li>
+        </ul>
+        Un <span class="highlight">RATÉ</span> survient quand une combinaison de 5 ne dévoile pas de nouveau bouton. Si tu ne sélectionnes que des tags déjà colorés, il n'y a pas de sanction.
+        <br><br>
+        <b>Récompense :</b> Une fois le bouton dévoilé, clique dessus et <span class="warning-text">TU NE TOUCHES PLUS À TON CUL</span>. Tu dois te toucher <b>EN L'ÉTAT</b> en lisant le chapitre. Heddy peut aider. 
+        <br><br>
+        <span class="warning-text">⚠️ Pas de sauvegarde : note bien les codes que tu découvres !</span>
+    </div>
+</div>
+
+<div class="stats">
+    <div>Tentatives : <span id="tries">0</span></div>
+    <div>Trouvailles : <span id="found-count">0</span> / 20</div>
+</div>
+
+<div id="game-grid" class="grid"></div>
+
+<div id="secret-lock">
+    <div style="color: var(--text-dim); font-size: 0.85rem; font-style: italic; margin-bottom: 10px;">"Additionne les tous, et mérite ton statut de grosse salope"</div>
+    <div id="lock-status" style="font-size: 2rem; margin-bottom: 10px;">🔒</div>
+    <input type="text" id="code-input" placeholder="CODE FINAL" maxlength="8" oninput="checkCode()">
+    <div style="color: var(--text-dim); font-size: 0.85rem; font-style: italic; margin-top: 10px;">Une belle récompense torride t'attend !</div>
+    <div id="secret-link">
+        <a href="https://nhentai.net/artist/endou-okito/popular-week" target="_blank">Ils sont mieux en physiques</a>
+    </div>
+</div>
+
+<div id="rewards-zone"></div>
+
+<div class="controls">
+    <div id="selection-status">Sélection : 0 / 5</div>
+    <button class="btn-check" id="check-btn" onclick="checkSelection()" disabled>Vérifier la combinaison</button>
+    <button class="btn-reset" style="background:none; color:grey; border:none; cursor:pointer;" onclick="location.reload()">Réinitialiser</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
